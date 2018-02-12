@@ -588,8 +588,8 @@ var timelines = function() {
 						// set height based off of item height
 						height = gSize.height + gSize.top - gParentSize.top;
 						// set bounding rectangle height
-						select(gParent).node().attr("height", height);
-						//select(view).node().attr("height", height);
+						select(gParent).node().setAttribute("height", height);
+						//select(view).node().setAttribute("height", height);
 					} else {
 						throw "height of the timeline is not set";
 					}
@@ -597,8 +597,8 @@ var timelines = function() {
 					if (!height) {
 						height = gParentSize.height;
 					} else {
-						gParentItem.node().attr("height", height);
-						//view.node().attr("height", height);
+						gParentItem.node().setAttribute("height", height);
+						//view.node().setAttribute("height", height);
 					}
 				}
 			}
@@ -606,7 +606,7 @@ var timelines = function() {
 			function setWidth() {
 				if (!width && !gParentSize.width) {
 					try {
-						width = gParentItem.node().attr("width");
+						width = gParentItem.node().setAttribute("width");
 						if (!width) {
 							throw "width of the timeline is not set. As of Firefox 27, timeline().with(x) needs to be explicitly set in order to render";
 						}
