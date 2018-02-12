@@ -585,8 +585,8 @@
 							// set height based off of item height
 							height = gSize.height + gSize.top - gParentSize.top;
 							// set bounding rectangle height
-							d3Selection.select(gParent).node().attr("height", height);
-							//select(view).node().attr("height", height);
+							d3Selection.select(gParent).node().setAttribute("height", height);
+							//select(view).node().setAttribute("height", height);
 						} else {
 							throw "height of the timeline is not set";
 						}
@@ -595,7 +595,7 @@
 							height = gParentSize.height;
 						} else {
 							gParentItem.node().setAttribute("height", height);
-							//view.node().attr("height", height);
+							//view.node().setAttribute("height", height);
 						}
 					}
 				}
