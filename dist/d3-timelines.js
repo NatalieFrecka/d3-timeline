@@ -594,7 +594,7 @@
 						if (!height) {
 							height = gParentSize.height;
 						} else {
-							gParentItem.node().attr("height", height);
+							gParentItem.node().setAttribute("height", height);
 							//view.node().attr("height", height);
 						}
 					}
@@ -603,7 +603,7 @@
 				function setWidth() {
 					if (!width && !gParentSize.width) {
 						try {
-							width = gParentItem.node().attr("width");
+							width = gParentItem.node().setAttribute("width");
 							if (!width) {
 								throw "width of the timeline is not set. As of Firefox 27, timeline().with(x) needs to be explicitly set in order to render";
 							}
