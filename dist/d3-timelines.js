@@ -22,8 +22,8 @@
 					rowSeparatorsColor = null,
 					backgroundColor = null,
 					tickFormat = {
-						format: d3TimeFormat.timeFormat("%I %p"),
-						tickTime: d3Time.timeHour,
+						format: d3TimeFormat.timeFormat("%Y"),
+						tickTime: d3Time.timeYear,
 						tickInterval: 1,
 						tickSize: 6,
 						tickValues: null
